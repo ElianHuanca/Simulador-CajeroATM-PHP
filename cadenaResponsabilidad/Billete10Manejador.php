@@ -11,7 +11,7 @@ class Billete10Manejador extends ManejadorBillete
         $imp = "";
         $cantidadRequerida = $retiro->getCantidadRestante();
 
-        $cantBilletes = intdiv($cantidadRequerida, 10);
+        $cantBilletes = intdiv($cantidadRequerida, 10);        
         $billetes10 = $cajero->getBilletes10();
 
         if ($cantBilletes > 0) {

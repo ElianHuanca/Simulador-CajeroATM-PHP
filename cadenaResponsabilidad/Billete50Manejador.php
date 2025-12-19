@@ -9,7 +9,7 @@ class Billete50Manejador extends ManejadorBillete{
         $imp = "";
         $cantidadRequerida = $retiro->getCantidadRestante();
 
-        $cantBilletes = $cantidadRequerida / 50;
+        $cantBilletes = intdiv($cantidadRequerida, 50);
         
         $retorno=$cantBilletes;
         $billetes50=$cajero->getBilletes50();
@@ -37,7 +37,7 @@ class Billete50Manejador extends ManejadorBillete{
     public function depositar(DepositoYRetiro $deposito, Cajero $cajero):string {
         $imp = "";
         $cantRequerida = $deposito->getCantidadRestante();
-        $cantBilletes = $cantRequerida / 50;
+        $cantBilletes = intdiv($cantRequerida, 50);
 
         if ($cantBilletes > 0) {
             $imp = "\n" . $cantBilletes . " billetes de 50 bs";

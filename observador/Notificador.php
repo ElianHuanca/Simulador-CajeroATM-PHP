@@ -1,4 +1,5 @@
 <?php
+require_once 'Observador.php';
 
 interface Notificador {
     public function agregarObservador(Observador $observador): void;
